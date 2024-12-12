@@ -1,0 +1,115 @@
+<!-- 
+ 1) Перегляньте та спробуйте основні HTML-теги:
+<header>, <footer>, <main>, <nav>, <section>, <article>, <aside>.
+Додайте зображення, посилання, списки.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_01</title>
+    <style>
+        .logo {
+            background: left;
+            /* background: left / cover url(beagle-dog-design-logo-art-vector.jpg); */
+            display: flex;
+            /* height: 400px; */
+            align-items: center;
+            font:
+                bold calc(1em + 2 * (100vw - 120vw) / 100) 'Dancing Script', fantasy;                
+            color: palevioletred;
+            text-shadow: #000 2px 2px 0.2rem;
+        }
+        header > h1 {
+            margin-bottom: 0;
+        }
+        header > time {
+            font: italic 0.7rem sans-serif;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            background-color: #45a1ff;
+            color: #fff;
+        }
+        aside {
+            width: 40%;
+            padding-left: 0.5rem;
+            margin-left: 0.5rem;
+            float: right;
+            box-shadow: inset 5px 0 5 px -5px #29627e;
+            font-style: italic;
+            color: #29627e;
+        }
+        aside > p{
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href=" https://www.shutterstock.com/search/cute-puppy-reading?msockid=34f16a22c1226eca34c27f3ec0b86f06">Cute Puppies Express!</a> 
+        <!-- href="#" on yourself-->
+    </header>
+    <article>
+        <header>
+            <h1>Beagles</h1>
+            <time>24.11.24</time>
+        </header>
+        <p>I love beagles <em>so</em> much! Like, really, a lot. They`re adorable and their ears are so, so snugly soft!</p>
+    </article>
+    <hr>
+    <article>
+        <h1>How to be a wizard</h1>
+        <ol>
+            <li>Grow a long, majestic beard</li>
+            <li>Weaar a tail, poinet hat</li>
+            <li>Have I mentioned the beard?</li>
+        </ol>
+        <footer>
+            <p>© 2018 Gandalf</p>
+        </footer>
+    </article>
+    <hr>
+    <main>
+        <h1>Яблоки</h1>
+        <p>Яблоко - плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии и для приготовления напитков.</p>
+        <article>
+            <h2>Сорт "Ред Делишес"</h2>
+            <p>Эти ярко-красные яблоки являются одними из самых популярных в Соединённых Штатах.</p>
+            <p>...</p>
+            <aside>I`am a wizard</aside>
+            <p>...</p>
+        </article>
+        <article>
+            <h2>Сорт "Гренни Смит"</h2>
+            <p>Эти сочные, зелёные яблоки являются одними из самых популярных в мире.</p>
+            <p>...</p>
+            <p>...</p>
+        </article>
+    </main>
+    <hr>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Main</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <section>
+        <h1>News</h1>
+        <article>
+            <h2>Breaking News: Technology Advances</h2>
+            <p>Today, a new breathrought in technology was announced...</p>
+        </article>
+        <article>
+            <h2>Sports News: Championship Results</h2>
+            <p>The championship finals ended with aan unexpected victory...</p>
+        </article>
+    </section>
+</body>
+</html>

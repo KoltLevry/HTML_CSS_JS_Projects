@@ -1,0 +1,31 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+}
+
+p {
+    color: green;
+}
+
+div.first {
+    box-shadow: 10px 10px 5px gray;
+    /* 
+    10px (offset-x): Shadow is 10px to the right.
+    10px (offset-y): Shadow is 10px below the element.
+    5px (blur-radius): Shadow edges are softened with a 5px blur. - розмиття
+    2px (spread-radius): Shadow expands by 2px in all directions. - нема
+    rgba(0, 0, 0, 0.5) (color): Shadow is semi-transparent black. -в мене сірий колір
+    */
+}
+
+div.second {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.third {
+    box-shadow: 5px 5px 15px -5px red;
+}

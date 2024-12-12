@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework_05</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Yomework_05</h1>
+    </header>
+    <main>
+      <div class="main-div-container_static">
+        Статичний блок
+        <div class="div_red_static">1</div>
+        <div class="div_green_static">2</div>
+        <div class="div_yellow_static">3</div>
+        <p>
+          Це значення за замовчуванням для всіх елементів. Елементи
+          розташовуються один за одним відповідно до потоку документа.
+          Координати top, left, right, bottom не діють.
+        </p>
+      </div>
+      <hr />
+      <div class="main-div-container_relativ">
+        Відносно позиціонований блок
+        <div class="div_red_relativ">1</div>
+        <div class="div_green_relativ">2</div>
+        <div class="div_yellow_relativ">3</div>
+        <p>
+          Елемент розташовується відносно свого початкового місця в потоці.
+          Можна зміщувати елемент за допомогою координат (top, left, right,
+          bottom).
+        </p>
+      </div>
+      <hr />
+      <div class="main-div-container_absolute">
+        Абсолютно позиціонований блок
+        <div class="div_red_absolute">1</div>
+        <div class="div_green_absolute">2</div>
+        <div class="div_yellow_absolute">3</div>
+        <p>
+          Елемент позиціонується відносно найближчого відносного предка (з
+          position: relative, absolute або fixed). Якщо такого предка немає,
+          елемент буде позиціонуватися відносно всього вікна браузера.
+          Видаляється з потоку документа.
+        </p>
+      </div>
+      <hr />
+      <!-- <div class="main-div-container_fixed">
+        Закріплений блок
+        <div class="div_red_fixed">1 fixed</div>
+        <div class="div_green_fixed">2 fixed</div>
+        <div class="div_yellow_fixed">3 fixed</div>
+        <p>
+          Елемент позиціонується відносно вікна браузера (не змінює положення
+          під час прокрутки сторінки). Залишається вказаній позиції незалежно
+          від руху сторінки.
+        </p>
+      </div> -->
+      <hr>
+      <div class="main-div-container_sticky">
+        Абсолютно позиціонований блок
+        <div class="div_red_sticky">1</div>
+        <div class="div_green_sticky">2</div>
+        <div class="div_yellow_sticky">3</div>
+        <p>
+          Елемент позиціонується відносно найближчого відносного предка (з
+          position: relative, absolute або fixed). Якщо такого предка немає,
+          елемент буде позиціонуватися відносно всього вікна браузера.
+          Видаляється з потоку документа.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <!-- <button class="scroll-top">↑ Top</button> -->
+       <a href="#top" class="scroll-top">↑ Top</a>
+      <p>&copy; Yomework_05</p>
+    </footer>
+  </body>
+</html>

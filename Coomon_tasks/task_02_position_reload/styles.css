@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: darkblue;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    z-index: 1000;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Static */
+.main-div-container_static {
+    position: static;
+    margin: 20px 60px;
+    padding: 30px 40px;
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_red_static {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    top: 10px;
+    left: 10px;
+}
+
+.div_green_static {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    /* margin-bottom:20px; */
+}
+
+.div_yellow_static {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* margin-bottom:20px; */
+}
+
+/* Relativ */
+.main-div-container_relativ {
+    position: relative;
+    margin: 20px 60px;
+    padding: 30px 40px;
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_red_relativ {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 5px;
+    left: 10px;
+}
+
+.div_green_relativ {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    /* margin-bottom:20px; */
+    left: 210px;
+    top: 5px;
+}
+
+.div_yellow_relativ {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* margin-bottom:20px; */
+    left: 10px;
+    top: 5px;
+}
+
+/* Absolut */
+.main-div-container_absolute {
+    position: relative;
+    height: 500px;
+    margin: 20px 60px;
+    padding: 30px 40px;
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_red_absolute {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 155px;
+    right: 10px; 
+}
+
+.div_green_absolute {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    /* margin-bottom:20px; */
+    left: 210px;
+    bottom: 5px; 
+}
+
+.div_yellow_absolute {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    left: 100px;
+    top: 105px; 
+}
+
+/* Fixed */
+.main-div-container_fixed {
+    /* position: relative; */
+    height: 500px;
+    margin: 20px 60px;
+    padding: 30px 40px;
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_red_fixed {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 0;
+    right: 0; 
+    padding: 10px;
+}
+
+.div_green_fixed {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    left: 210px;
+    bottom: 155px; 
+}
+
+.div_yellow_fixed {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    left: 100px;
+    top: 105px; 
+}
+
+/* Sticky */
+.main-div-container_sticky {
+    /* position: relative; */
+    height: 700px;
+    margin: 20px 60px;
+    padding: 30px 40px;
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_red_sticky {
+    position: sticky;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 20px;
+    right: 10px; 
+    padding: 10px;
+}
+
+.div_green_sticky {
+    position: sticky;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    left: 210px;
+    bottom: 155px; 
+}
+
+.div_yellow_sticky {
+    position: sticky;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    left: 100px;
+    top: 105px; 
+}
+
+/* button to top */
+.scroll-top {
+    position: fixed;
+    text-decoration: none;
+    text-align: center;
+    /* justify-items: center; */
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 20px;
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.scroll-top:hover {
+    background-color: darkorange;
+}
+
+/* footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+}

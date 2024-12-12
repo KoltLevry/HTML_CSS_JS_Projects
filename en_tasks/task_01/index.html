@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_01</title>
+    <style>
+        p.logo {
+            background-color: aqua;
+        }
+        .i1 {
+            background-color: yellow;
+        }
+        .i2 {
+            background-color: green;
+        }
+        .i3 {
+            background-color: red;
+        }
+        /* Стилі для першої таблиці */
+        table.simpleTable {
+            border-collapse: collapse;
+            border: 1px solid brown;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-size: 1rem;
+            width: 30%;
+
+        }
+        table.simpleTable th,
+        table.simpleTable td {
+            border: 1px solid black;
+            padding: 9%;
+            text-align: center;
+        }
+        /* Стилі для другої таблиці */
+         table.tFromSite {
+            border-collapse: collapse;
+            border: 2px solid rgb(140, 140, 140);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+         }
+         caption {
+            caption-side: bottom;
+            padding: 10px;
+            font-weight: bold;
+         }
+         thead,
+         tfoot {
+            background-color: rgb(228, 240, 245);
+         }
+         th, 
+         td {
+            border: 1px solid rgb(160, 160, 160);
+            padding: 8px 10px;
+         }
+         td:last-of-type {
+            text-align: center;
+         }
+         tbody > tr:nth-of-type(even) {
+            background-color: rgb(237, 238, 242);
+         }
+         tfoot th {
+            text-align: right;
+         }
+         tfoot td {
+            font-weight: bold;
+         }
+    /* FORM */
+    /*Використання стилів display: table, display: table-row, і display: table-cell дозволяє оформити форму у вигляді таблиці без використання тегу <table>  */
+    form.form-example {
+        display: table; /*Задає контейнеру <form> поведінку таблиці.*/
+    }
+    div.form-example{
+        display: table-row; /*Кожен <div> у формі стає схожим на рядок таблиці.*/
+    }
+    /*Елементи <label> і <input> у кожному рядку виглядають як окремі комірки таблиці.*/
+    label,
+    input {
+        display: table-cell;
+        margin-bottom: 10px; /*Задає вертикальний відступ */
+    }
+    label {
+        padding-right: 10px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- target="_blank" == hyperlink should open in a new tab or window -->
+    <h1><a href="#" target="_blank">Hi guys!</a></h1> 
+    <h2 id="section 1 - robots">First foto: ok</h2>
+    <p class="i1">
+        <img src="Spaceship.png" alt="Spaceship" height="100">
+    </p>
+    <h2>Second foto: not ok</h2>
+    <p class="logo">
+        <img src="Spaceship1.png" alt="Spaceship" height="100">
+    </p>
+    <h2>Third foto: ok</h2>
+    <p class="i2">
+        <img src="Spaceship.png" alt="Spaceship" height="100">
+    </p>
+    <h2>Forth foto: ok</h2>
+    <p class="i3">
+        <img src="Spaceship.png" alt="Spaceship" height="100">
+    </p>
+    <hr>
+    <!-- Перша таблиця -->
+    <table class="simpleTable" id="section 2 - tables">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">1</td>
+            <td>2</td>
+        </tr>
+
+    </table>
+    <hr>
+    <!-- Друга таблиця -->
+    <table class="tFromSite">
+        <caption>Front-end web developer course 2024</caption>
+        <thead>
+            <tr>
+                <th scope="col">Person</th>
+                <th scope="col">Most interest in</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Chris</th>
+                <td>HTML tables</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <th scope="row">Dennis</th>
+                <td>Web accessibility</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <th scope="row">Sarah</th>
+                <td>JavaScript frameworks</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <th scope="row">Karen</th>
+                <td>Web performance</td>
+                <td>36</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Average age</th>
+                <td>33</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <!-- Forms -->
+     <form action="">
+        <div class="form example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form example">
+            <input type="submit" value="Subscribe!">
+        </div>
+     </form>
+     <hr>
+    <!-- Якір всередині однієї сторінки: -->
+     <h1>Welcome to My page!</h1>
+     <p><a href="#section 1 - robots">Go to Section with robots</a></p>
+     <p><a href="#section 2 - tables">Go to Section with tables</a></p>
+     <p><a href="#top">Back to Top</a></p>
+     <hr>
+    <!-- task -->
+     
+</body>
+</html>

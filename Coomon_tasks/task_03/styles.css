@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ai */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+/* ai */
+
+.div-main {
+    padding: 30px 30px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.div-border-example {
+    border: 5px dashed blue;
+    border-radius: 15px;
+}
+
+hr {
+    margin: 10px;
+}
+
+.div-border-example_solid {
+    border-width: 4px;
+    border-style: solid;
+    border-color: green;
+}
+.div-border-example_dotted {
+    border: 4px dotted blue;
+    border-radius: 15px;
+}
+.div-border-example_dashed {
+    border: 4px dashed red;
+    border-radius: 15px;
+}
+.div-border-example_double {
+    border: 24px double orange;
+    border-radius: 15px;
+}
+
+.div-border-sides {
+    padding: 12px;
+    border-top: 2px solid blue;
+    border-right: 4px dotted green;
+    border-bottom: 6px double black;
+    border-left: 3px dashed pink;
+}
+
+.div-box-sizing-example {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.div-box-sizing-task-first, .div-box-sizing-task-second {
+    width: 300px;
+    border: 15px solid blue;
+}
+
+.div-box-sizing-task-first {
+    box-sizing: content-box;
+}
+
+.div-box-sizing-task-second {
+    box-sizing: border-box;
+}
+
+/* mext */
+.div-border-1rem-solid {
+    border: 1rem solid blue;  /* 1rem = 16px */
+    background-color: lightblue;
+}
+.div-border-thick {
+    background-color: antiquewhite;
+    border: thick double #32a1ce;
+}
+
+.div-border-mm {
+    background-color: rgb(139, 97, 41);
+    border: 4mm ridge rgba(211, 220, 50, .6);
+}
+
+.div-border-groove {
+    border: 4rem groove red;
+    background-color: lightgreen;
+}
+.div-border-inset {
+    border: thin inset black;
+    background-color: lightpink;
+}
+.div-border-outset {
+    border: 3em outset rebeccapurple;
+    background-color: lightblue;
+}
+
+/* ai */
+#borders .border {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    background-color: aliceblue;
+    line-height: 50px;
+}
+
+.border.solid {
+    border: 2px solid black;
+}
+
+.border.dotted {
+    border: 2px dotted green;
+}
+
+.border.dashed {
+    border: 2px dashed blue;
+}
+
+.border.double {
+    border: 4px double red;
+}
+
+#sides .border-sides {
+    width: 200px;
+    height: 100px;
+    border-top: 5px solid blue;
+    border-right: 4px dashed green;
+    border-bottom: 6px double blanchedalmond;
+    border-left: 3px dotted orange;
+    background-color: blueviolet;
+}
+
+#box-sizing .box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid darkgray;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box.content-box {
+    box-sizing: content-box;
+    background-color: lightblue;
+}
+
+.box.border-box {
+    box-sizing: border-box;
+    background-color: lightcoral
+}
+/* ai 2 */
+p.pixels {
+    font-size: 32px;
+}
+
+.parent {
+    font-size: 10px;
+}
+.child {
+    font-size: 2em; /*parent(font-size: (px)) * child(font-size: (em))*/
+}
+.grandchild {
+    font-size: 2em; /*10px * 2 * 2 */
+}
+.toCheck {
+    font-size: 40px;
+}
+
+.rem {
+    font-size: 2rem;
+}

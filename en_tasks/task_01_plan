@@ -1,0 +1,56 @@
+1. Attributes
+Explanation:
+Attributes in HTML are used to configure elements and provide additional information about them. 
+They are added to the opening tag of an element and look like this: attribute_name="value".
+
+Examples of attributes:
+id — assigns a unique identifier to an element. // задає 
+class — allows grouping elements for styling or JavaScript.
+href — hyperlink for the <a> tag.
+src — path to an image for the <img> tag.
+alt — text for an image if it fails to load.
+
+Task:
+Create an HTML document with a hyperlink that has the href and target="_blank" attributes.
+Add an image with src and alt attributes.
+Use id and class attributes to create an element that can be styled using CSS.
+
+2. Tables
+Explanation:
+Tables in HTML are used to display data in a tabular format. Key tags:
+<table> — defines a table.
+<tr> — table row.
+<td> — table cell (regular).
+<th> — table header cell (bold text, centered).
+<caption> — table title.
+Attributes:
+border — adds borders to the table.
+colspan — merges cells horizontally.
+rowspan — merges cells vertically.
+
+Task:
+Create a table with three rows and two columns.
+Add headers in the first row using <th>.
+Add a border="1" attribute to the table.
+Merge two cells in one row using colspan.
+
+3. Forms
+Explanation:
+Forms are used to collect data from users. Key tags:
+<form> — container for the form.
+<input> — input field (text, password, button, etc.).
+<textarea> — multi-line text field.
+<select> and <option> — dropdown list.
+<button> — button.
+
+Attributes:
+action — path to the script that processes form data.
+method — method of data submission (GET or POST).
+type — type of input (text, password, submit, checkbox, etc.).
+name — field identifier sent to the server.
+placeholder — placeholder text in a field.
+
+Task:
+Create a form with a text field, a password field, and a submit button.
+Add a dropdown list with three options.
+Use the placeholder attribute for hints in the text field.

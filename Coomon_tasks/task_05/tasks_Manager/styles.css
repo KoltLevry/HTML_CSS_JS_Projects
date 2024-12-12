@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html, #root {
+    height: 100vh;
+    width: 100vw;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    padding: 40px;
+    background-color: aquamarine;
+} */
+
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        "form"
+        "maintaskList"
+        "makeChoise"
+    ;
+    grid-template-rows: 1fr 3fr 1fr;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+    background-color: aquamarine;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+}
+
+.form {
+    font-size: 16px;
+}
+
+.form input{
+    padding: 5px;
+    border: none;
+    width: 180px;
+}
+
+.addTaskButton{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.maintaskList {
+    padding: 5px;
+    background-color: rgba(250, 235, 215, 0.829);
+}
+
+
+.makeChoise {
+    display: flex;
+    justify-content: space-between;
+}
+
+.makeChoise button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(224, 158, 71, 0.781);
+}
+
+.makeChoise button:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+    background-color: rgba(231, 139, 19, 0.781);
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 100px; */
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.button-container {
+    display: flex;
+    gap: 5px; /* Проміжок між кнопками */
+}
+
+button {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.complete-button {
+    background-color: lightgreen;
+    color: white;
+}
+
+.edit-button {
+    background-color: lightblue;
+    color: white;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
