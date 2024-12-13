@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html, #root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products filter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="root">
+        <header id="header">
+            <input type="number" placeholder="min">
+            <label for="">Min</label>
+            <input type="number" placeholder="max">
+            <label for="">Max</label>
+            <button class="applyButton">Apply price</button>
+        </header>
+        <main id="main">
+            <div class="main__div-list">
+                <table class="table">
+                    <caption>Our products 2024</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <th>Banana</th>
+                            <th>50</th>
+                        </tr>
+                        <tr>
+                            <th>Cherry</th>
+                            <th>100</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="main__div-buttons">
+                <button class="saveButton">Save choosed items</button>
+                <button class="resetAllButton">Reset all</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
