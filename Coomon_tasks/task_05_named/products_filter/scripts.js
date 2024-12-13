@@ -9,43 +9,93 @@
 при нажиманні кнопки Скинути. всі зміни скидуються
 */
 
+// // rows.forEach(row => {
+// //     const name = row.children[0].textContent;
+// //     const price = Number(row.children[1].textContent);
+// //     console.log(`Name ${name}, Price: ${price}`);
+// // });
+
+
+
 const inputMin = document.querySelector('[name="inputMin"]');
-const inputMax = document.querySelector('[name="inputMax"]');
-const applyButton = document.querySelector('.applyButton');
-const tableList = document.querySelector(".table");
-const saveButton = document.querySelector('.saveButton');
-const resetAllButton = document.querySelector('.resetAllButton');
+const inputMax = document.querySelector("[name='inputMax']");
+const applyBtm = document.querySelector(".applyButton");
+const saveButton = document.querySelector(".saveButton");
+const resetAllButton = document.querySelector(".resetAllButton");
 
-const mainContainer = document.getElementById("main");
+const rows = document.querySelectorAll(".table tbody tr");
 
-let originData = [];
-let currentData = [];
+const loadProductsFromStorage = () => {
+    const savedProducts = JSON.parse(localStorage.getItem("products")) || [];
 
-const applyPrice = () => {
-    if(Number(inputMin.value) >= 5) {
-        console.log(inputMin.value);
-    } else {
-        console.log("none try min");
+    if(savedProducts.length > 0) {
+        rows.forEach(row => {
+            const name = row.children[0].textContent.trim();
+            const price = Number(row.children[1].textContent.trim());
+            const match = savedProducts.find(product => 
+                product.name === name && product.price === price);
+                row.style.display = match ? "" : 'none';
+        });    
+    }
+};
+
+const applyClick = () => {
+    const minPrice = Number(inputMin.value);
+    const maxPrice = Number(inputMax.value);
+    
+    if(minPrice < 0 || maxPrice > 1000 || minPrice > maxPrice) {
+        alert("Invalid price value! Try again")
+        return;
     }
 
-    if(Number(inputMax.value) <= 15) {
-        console.log(inputMax.value);
-    } else {
-        console.log("none try max");
-    }
-}
+    let filteredData = [];
 
-const saveChange = () => {
+    rows.forEach(row => {
+        // const price = Number(row.children[1].value); // incorrect
+        const price = Number(row.children[1].textContent.trim());
+        
+        if(price >= minPrice && price <= maxPrice) {
+            row.style.display = "";
+            filteredData.push({
+                name: row.children[0].textContent.trim(),
+                price: price
+            });
+        } else {
+            row.style.display = "none";
+        }
+    });
 
-}
+    console.log("Filtered data: ", filteredData);
+};
 
-const resetAll = () => {
+const saveBtnClick = () => {
+    const filteredData = [...rows]
+        .filter(row => row.style.display !== 'none') // Тільки видимі рядки
+        .map(row => ({
+            name: row.children[0].textContent.trim(),
+            price: Number(row.children[1].textContent.trim())
+        }));
 
-}
+    // Зберігаємо дані в localStorage
+    localStorage.setItem('products', JSON.stringify(filteredData));
+
+    console.log("Збережені дані:", filteredData);
+};
+
+
+const resetAllBtnClick = () => {
+    rows.forEach(row => {
+        row.style.display = '';
+    });
+
+    localStorage.removeItem('products');
+    console.log("Всі зміни скинуті");
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-    // initTable();
-    applyButton.addEventListener("click", applyPrice);
-    saveButton.addEventListener("click", saveChange);
-    resetAllButton.addEventListener("click", resetAll);
+    applyBtm.addEventListener("click", applyClick);
+    saveButton.addEventListener("click", saveBtnClick);
+    resetAllButton.addEventListener("click", resetAllBtnClick);
+    loadProductsFromStorage();
 });
+
