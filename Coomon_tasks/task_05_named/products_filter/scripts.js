@@ -16,11 +16,23 @@ const tableList = document.querySelector(".table");
 const saveButton = document.querySelector('.saveButton');
 const resetAllButton = document.querySelector('.resetAllButton');
 
+const mainContainer = document.getElementById("main");
+
 let originData = [];
 let currentData = [];
 
 const applyPrice = () => {
+    if(Number(inputMin.value) >= 5) {
+        console.log(inputMin.value);
+    } else {
+        console.log("none try min");
+    }
 
+    if(Number(inputMax.value) <= 15) {
+        console.log(inputMax.value);
+    } else {
+        console.log("none try max");
+    }
 }
 
 const saveChange = () => {
@@ -31,8 +43,8 @@ const resetAll = () => {
 
 }
 
-document.addEventListener('("DOMContenLoaded")', () => {
-    initTable();
+document.addEventListener("DOMContentLoaded", () => {
+    // initTable();
     applyButton.addEventListener("click", applyPrice);
     saveButton.addEventListener("click", saveChange);
     resetAllButton.addEventListener("click", resetAll);
