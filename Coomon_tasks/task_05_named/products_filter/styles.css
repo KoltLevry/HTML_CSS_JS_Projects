@@ -26,7 +26,6 @@ body, html, #root {
     gap: 30px;
 
     width: 500px;
-    border-radius: ;
 }
 
 #header input{
@@ -103,4 +102,12 @@ caption{
 
 .main__div-buttons button:hover{
     background-color: bisque;
+}
+
+/* predict */
+.no-results {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
 }
