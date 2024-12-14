@@ -1,0 +1,95 @@
+Завдання 2: Фільтрація товарів
+Створи програму для фільтрації списку товарів.
+
+Вимоги:
+Збережи список товарів у масиві, наприклад:
+const products = [
+    { id: 1, name: "Apple", price: 50 },
+    { id: 2, name: "Banana", price: 30 },
+    { id: 3, name: "Cherry", price: 100 }
+];
+Виведи список товарів у вигляді таблиці з колонками: Назва, Ціна.
+Додай поле для введення мінімальної та максимальної ціни, 
+щоб користувач міг фільтрувати товари.
+Використовуй метод filter для відображення лише тих товарів, 
+які відповідають діапазону цін.
+Додай кнопку "Зберегти вибрані товари", яка збереже відфільтрований 
+список у localStorage.
+
+// all ai-js
+const inputMin = document.querySelector('[name="inputMin"]');
+const inputMax = document.querySelector('[name="inputMax"]');
+const applyButton = document.querySelector('.applyButton');
+const tableList = document.querySelector(".table tbody");
+const saveButton = document.querySelector('.saveButton');
+const resetAllButton = document.querySelector('.resetAllButton');
+
+let originalData = []; // Зберігаємо початкові дані
+let currentData = [];  // Поточний стан таблиці
+
+// Ініціалізація даних
+const initTable = () => {
+    const rows = [...tableList.querySelectorAll("tr")];
+    originalData = rows.map(row => {
+        const cells = row.querySelectorAll("td");
+        return {
+            name: cells[0].textContent.trim(),
+            price: Number(cells[1].textContent.trim()),
+        };
+    });
+    currentData = [...originalData];
+};
+
+// Оновлення таблиці
+const updateTable = (data) => {
+    tableList.innerHTML = ""; // Очищуємо таблицю
+    if (data.length === 0) {
+        tableList.innerHTML = '<tr><td colspan="2" class="no-results">Фільтер недійсний</td></tr>';
+    } else {
+        data.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${item.name}</td><td>${item.price}</td>`;
+            tableList.appendChild(row);
+        });
+    }
+};
+
+// Застосувати фільтр
+const applyPrice = () => {
+    const min = Number(inputMin.value);
+    const max = Number(inputMax.value);
+
+    // Валідація
+    if (isNaN(min) || isNaN(max) || min < 0 || max > 1000 || min > max) {
+        alert("Неправильний діапазон. Введіть коректні значення.");
+        return;
+    }
+
+    // Фільтрація
+    currentData = originalData.filter(item => item.price >= min && item.price <= max);
+    updateTable(currentData);
+};
+
+// Зберегти зміни
+const saveChange = () => {
+    originalData = [...currentData]; // Зберігаємо поточний стан
+    alert("Зміни збережено!");
+};
+
+// Скинути все
+const resetAll = () => {
+    currentData = [...originalData]; // Відновлюємо початковий стан
+    updateTable(currentData);
+
+    // Очистити поля вводу
+    inputMin.value = "";
+    inputMax.value = "";
+};
+
+// Ініціалізація
+document.addEventListener("DOMContentLoaded", () => {
+    initTable();
+    applyButton.addEventListener("click", applyPrice);
+    saveButton.addEventListener("click", saveChange);
+    resetAllButton.addEventListener("click", resetAll);
+});

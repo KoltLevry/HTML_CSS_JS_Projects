@@ -1,0 +1,133 @@
+*  {
+    box-sizing: border-box;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body, html, #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* border: 1px solid black; */
+    /* background-color: rgb(185, 6, 95); */
+}
+
+#header, #main {
+    width: 700px;
+    border-radius: 20px;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgb(185, 185, 95);
+}
+
+.hader__inputs-div input, 
+.addCost,
+.buttonsContainer button  {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hader__inputs-div {
+    display: flex;
+    gap: 20px;
+}
+
+.inputAmount {
+    width: 100px;
+}
+
+.addCost {
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.addCost:hover {
+    box-shadow: 0 4px 10px rgba(256, 0, 0, 0.2);
+}
+
+/* main - top - table*/
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 30px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+#table{
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    /* border: 1px solid vlack; */
+    /* border-collapse: collapse; */
+}
+
+#table tbody{
+
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+}
+
+
+
+/* main__div - center - result of amount*/
+.containerDisplayresult{
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.style-textResult {
+    color: red;
+}
+
+
+/* main__div - bottom - buttons*/
+.buttonsContainer {
+    display: flex;
+    gap: 50px;
+    padding: 0 30px;
+}
+
+.buttonsContainer button{
+    cursor: pointer;
+}
+
+.saveBtn{
+    background-color: rgba(255, 255, 0, 0.555);
+}
+
+.saveBtn:hover{
+    background-color: rgba(197, 197, 89, 0.555);
+}
+
+.deleteBtn{
+    background-color: rgba(197, 0, 0, 0.555);
+}
+
+.deleteBtn:hover{
+    background-color: rgba(197, 102, 89, 0.63);
+}

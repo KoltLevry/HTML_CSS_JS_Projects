@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="root">
+        <header id="header">
+            <h1>Завдання 3: Калькулятор витрат</h1>
+            <div class="hader__inputs-div">
+                <input type="text" placeholder="Витрати: Їжа, Розваги, ..." maxlength="30" name="inputCost" class="inputCost">
+                <input type="number" placeholder="Сума" name="inputAmount" min="0" class="inputAmount">
+                <button type="button" class="addCost">Додати витрату</button>
+            </div>
+        </header>
+        <main id="main">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Категорія</th>
+                        <th>Сума</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>                    
+                </tbody>
+            </table>
+            <div class="containerDisplayresult">
+                <p>Загальна сума витрат: </p>
+                <p class="textResult">0</p>
+            </div>
+            <div class="buttonsContainer">
+                <button class="saveBtn">Зберегти витрати</button>
+                <button class="deleteBtn">Видалити витрати</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

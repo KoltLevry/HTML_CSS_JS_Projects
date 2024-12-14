@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products filter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="root">
+        <header id="header">
+            <div>
+                <input type="number" placeholder="min" name="inputMin" min="0" max="1000">
+                <label for="inputMin">Min</label>
+            </div>
+            <div>
+                <input type="number" placeholder="max" name="inputMax" min="0" max="1000">
+                <label for="inputMax">Max</label>
+            </div>
+            <button class="applyButton">Apply price</button>
+        </header>
+        <main id="main">
+            <div class="main__div-list">
+                <table class="table">
+                    <caption>Our products 2024</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Banana</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Cherry</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="main__div-buttons">
+                <button class="saveButton">Save choosed items</button>
+                <button class="resetAllButton">Reset all</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
